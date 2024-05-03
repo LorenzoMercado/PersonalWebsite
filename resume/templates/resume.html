@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <title>Lorenzo Mercado</title>
+  <style>
+    body {
+      background-color: #737387;
+    }
+    /* The sidebar menu */
+    .sidenav {
+      height: 100%;
+      width: 140px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #db2b39;
+      box-shadow: 0px 0px 20px #1e1b18;
+      overflow-x: hidden;
+      padding-top: 80px;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+      font-size: 20px;
+      color: #fdfffc;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: #280000;
+      border: none;
+    }
+    
+    /* The currently selected tab should be indicated */
+    .sidenav a.nav-link.active{
+      background-color: #db2b39;
+      color: #1e1b18;
+      border: none;
+    }
+
+    /* Remove the list border */
+    .sidenav ul {
+      border: none;
+    }
+
+    .sidenav li {
+      padding-top: 15px;
+    }
+
+    /* The download button positioned at the bottom of the sidenav */
+    .sidenav input {
+      position: absolute;
+      bottom: 6px;
+      left: 16px;
+      border-radius: 30px;
+      background-color: #fdfffc;
+      box-shadow: 3px 3px #1e1b18;
+      outline-color: #1e1b18;
+      color: #1e1b18;
+    }
+
+    /* When moused over change the download button's color */
+    .sidenav input:hover {
+      background-color: #737387;
+      color: #fdfffc;
+    }
+
+    /* Content 'bubble' */
+    .tab-content {
+      position: fixed;
+      top: 20px;
+      left: 160px;
+      right: 20px;
+      bottom: 20px;
+      border-radius: 20px;
+      padding: 40px;
+      padding-top: 30px;
+
+      background-color: #fdfffc; 
+      box-shadow: 0px 0px 20px #1e1b18, 10px 10px #1e1b18;
+      color: #280000;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .tab-content a{
+      color:#280000;
+    }
+
+    .tab-content a:hover{
+      color: #280000;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#skills">Skills</a>
+      </li>
+    </ul>
+
+    <input title='Download Resume as PDF' type="button" value="Download" onclick="window.open('download_pdf')">
+  </div>
+
+
+  <!-- Page content -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="about">
+      <h1 style="font-size: 100px;">Lorenzo Mercado</h1>
+      <h3>Senior Computer Science Student At Rensselaer Polytechnic Institute</h3>
+      <img src="{% static 'portrait.png' %}" style="position: absolute; right: 20px; top: 20px;">
+      <br><br>
+
+
+      <h4>
+        Hi! I'm Lorenzo Mercado, an enthusiastic computer science major at RPI. I have a passion for <br>
+        all aspects of coding,from web development to information retrieval, with a particular interest <br>
+        in Artificial Intelligence. I'm excited to finish my time at RPI and launch into the start of my <br>
+        professional career. I hope this website gives you a better idea of who I am and what I've learned <br>
+        over the years.
+      </h4>
+      <br>
+
+      <h5 title = 'primary email' style="text-align: right;">lorenzom.mercado@gmail.com</h5>
+      <h5 title = 'college email' style="text-align: right;">mercal@rpi.edu</h5>
+      <h5 title = 'phone number' style="text-align: right;">413-234-9872</h5>
+      <a title = 'LinkedIn' href="linkedin.com/in/lorenzommercado">
+        <h5 title = 'LinkedIn' style="text-align: right;">linkedin.com/in/lorenzommercado</h5>
+      </a>
+      <a title = 'GitHub' href="github.com/LorenzoMercado">
+        <h5 title = 'GitHub' style="text-align: right;">github.com/LorenzoMercado</h5>
+      </a>
+
+    </div>
+    <div class="tab-pane fade" id="projects">
+      <a href="github.com/LorenzoMercado" style="position: absolute; right:30px;">
+        <h1>GitHub</h1>
+      </a>
+
+      <h1 style="font-size: 100px;">Projects</h1>
+
+      <a href="https://github.com/StudiousSDD/Studious"><img src="{% static 'MainLogo.png' %}"></a>
+      <p>
+        Studious was a web based note taking and calendar app geared towards college students. The project took place during my 
+        ARCH summer semester in Junior year as a collaborative effort with 4 other students. The idea behind the web app was to 
+        allow students to upload their class schedule from an existing tool, QUACCs, and have their classes displayed and ready 
+        to take notes. The app offered a uniwue solution where each class, and each session of that class, would hold it's own 
+        folder of notes. This would allow students to 'log' notes from each class, allowing for better organization and easier 
+        studying. This project was my introduction to web development as well as the development structure SCRUM. I learned a 
+        lot about AGILE methodologies and what it takes to work in a small SCRUM team on a weekly deliverable cycle. While I 
+        don't believe I will return to the project, I'm incredibly proud of what we managed to achieve in the time frame as a 
+        first web app. Everything from designing a logo to launching a real site for our final presentation served to prepare 
+        me for future projects and classes.
+      </p>
+      <br><br>
+
+      <a href="https://github.com/AI-and-Blockchain/F23_Blockchain_Bazaar"><h2>BLOCKCHAIN BAZAAR</h2></a>
+      <p>
+        Blockchain Bizaar was a project I ran with two of my classmates in AI and Blockchain during my junior year. 
+        The goal of the project was to use an AI model to price unique items, represented by NFTs, based on their stats. 
+        The project saw the integration of multiple models for buying and selling the items, a website to interact with 
+        the item store, and an Ethereum smart contract to both generate and record ownership of the items. During the 
+        project I learned about integration between the web and blockchain as well as several AI models that were tested 
+        to find an optimal solution for our use case. I gained import skills in team leadership as well as presenting data 
+        and deliverables on a weekly basis. I do hope to one day improve or redo this project without the limitations of the 
+        class project both in scope and time. These project version as well as any future versions can be found on my github.
+      </p>
+    </div>
+    <div class="tab-pane fade" id="experience">
+      <h1 style="font-size: 100px;">Experience</h1>
+      <br>
+
+      <h2>Education</h2>
+      <br>
+
+      <h4>
+        RENSSELAER POLYTECHNIC INSTITUTE, School of Science Troy, NY <br>
+        Bachelor of Science, Computer Science, Concentration in Artificial Intelligence May 2025
+      </h4>
+      <br>
+
+      <p>
+        I am currently a Senior at RPI. I was awarded several scholarships including the Rensselaer Leadership Award.
+        During my time here I have achieved 5 semesters of Dean's or Dean's Honor List with a cumulative GPA of 3.46. 
+        Some of my potentially relevant coursework is: AI and Blockchain, Data Structures, Information Retrieval, 
+        Operating Systems, and Ethics of AI.
+      </p>
+      <br>
+
+      <h2>Work Experience</h2>
+      <br>
+
+      <h4>
+        WALMART <br>
+        Stocking Assosiate
+      </h4>
+      <br>
+
+      <p>
+        While not very relevant to computer science, working at Walmart did teach me how to get through
+        a long work day. It also gave me experience in team work and customer service... as well as a workout.
+      </p>
+
+    </div>
+    <div class="tab-pane fade" id="skills">
+      <h1 style="font-size: 100px;">SKILLS/ACTIVITIES</h1>
+      <br>
+
+      <h2>Technical</h2>
+      <p>
+        Proficient: Google Suite, MS Office Suite <br>
+        Basic: R Studio
+      </p>
+      <br>
+      
+      <h2>Programming</h2>
+      <p>
+        Advanced: C, C++, Java, Python <br>
+        Proficient: QBASIC, Salsa, Daphne, MIPS, LISP, Django, HTML, XML, Haskell, OZ, ProLog, Solidity, javascript, CSS
+      </p>
+      <br>
+
+      <h2>Languages</h2>
+      <p>
+        Native: English <br>
+        Basic: Spanish
+      </p>
+      <br>
+
+      <h2>Interests</h2>
+      <p>
+        AI Language Generation Research, Reading Fiction Novels, Video Games, Long-Distance Running
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>
